@@ -11,4 +11,16 @@ $APPLICATION->SetTitle("Личный кабинет покупателя");
 		"USER_PROPERTY" => array(),
 		"USER_PROPERTY_NAME" => ""
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br>
+ <br>
+ <?$APPLICATION->IncludeComponent(
+	"bitrix:subscribe.form",
+	"",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"PAGE" => "#SITE_DIR#about/subscr_edit.php",
+		"SHOW_HIDDEN" => "N",
+		"USE_PERSONALIZATION" => "Y"
+	)
+);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

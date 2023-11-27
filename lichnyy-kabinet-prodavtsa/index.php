@@ -13,14 +13,4 @@ $APPLICATION->SetTitle("Личный кабинет продавца");
 	)
 );?><br>
  <br>
- <?$APPLICATION->IncludeComponent(
-	"bitrix:subscribe.form",
-	"",
-	Array(
-		"CACHE_TIME" => "3600",
-		"CACHE_TYPE" => "A",
-		"PAGE" => "#SITE_DIR#about/subscr_edit.php",
-		"SHOW_HIDDEN" => "N",
-		"USE_PERSONALIZATION" => "Y"
-	)
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
