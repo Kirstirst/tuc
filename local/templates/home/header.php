@@ -22,8 +22,7 @@ use Bitrix\Main\Page\Asset;
         <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");?>
         <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/animate.css");?>
         <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");?>
-        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/css/fl-bigmug-line.css");?>
-
+        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");?>
        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/aos.css");?>
        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");?>
 
@@ -63,16 +62,43 @@ use Bitrix\Main\Page\Asset;
             <div class="row align-items-center">
                 <div class="col-6 col-md-6">
                     <p class="mb-0">
-                        <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
-                                class="d-none d-md-inline-block ml-2">+2 102 3923 3922</span></a>
-                        <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
-                                class="d-none d-md-inline-block ml-2">info@domain.com</span></a>
+                        <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/phone.php"
+                                    )
+                                );?>
+
+                        <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/mail.php"
+                                    )
+                                );?>
                     </p>
                 </div>
                 <div class="col-6 col-md-6 text-right">
-                    <a href="#" class="mr-3"><span class="text-black icon-facebook"></span></a>
-                    <a href="#" class="mr-3"><span class="text-black icon-twitter"></span></a>
-                    <a href="#" class="mr-0"><span class="text-black icon-linkedin"></span></a>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    ".default",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/include/soc_network.php"
+                    )
+                );?>
                 </div>
             </div>
         </div>
@@ -82,8 +108,17 @@ use Bitrix\Main\Page\Asset;
         <div class="container py-1">
             <div class="row align-items-center">
                 <div class="col-8 col-md-8 col-lg-4">
-                    <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span
-                                    class="text-danger">.</span></strong></a></h1>
+                    <h1 class=""><?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            ".default",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/logo.php"
+                            )
+                        );?></h1>
                 </div>
                 <div class="col-4 col-md-4 col-lg-8">
                     <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -117,7 +152,22 @@ use Bitrix\Main\Page\Asset;
                         </ul>
                     </nav>
                 </div>
-
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "top_menu",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "1",
+                        "MENU_CACHE_GET_VARS" => array(0=>"",),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "N",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "top",
+                        "USE_EXT" => "N"
+                    )
+                );?>
 
             </div>
         </div>
