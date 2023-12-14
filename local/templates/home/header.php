@@ -140,7 +140,20 @@ use Bitrix\Main\Page\Asset;
 	false
 );?>
 
+
             </div>
         </div>
     </div>
+    <?if($APPLICATION->GetCurDir() !== "/") {
+        $APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"crumbs_bread", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "crumbs_bread"
+	),
+	false
+);}?>
 </div>
