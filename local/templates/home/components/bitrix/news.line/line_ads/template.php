@@ -58,7 +58,7 @@ $this->setFrameMode(true);
                                     <strong><? if($arItem["PROPERTY_GARAGE_VALUE"] == true){
                                         echo $arItem["PROPERTY_GARAGE_VALUE"];}
                                         else{
-                                            echo "нет";}
+                                            echo GetMessage("NO");}
                                         ?>
                                     </strong>
                                 </div>

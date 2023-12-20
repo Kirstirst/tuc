@@ -67,5 +67,6 @@ $this->setFrameMode(true);
             </div>
          <?endforeach;?>
           </div>
+<?=$arResult["NAV_STRING"]?>
     </div>
 </div>
