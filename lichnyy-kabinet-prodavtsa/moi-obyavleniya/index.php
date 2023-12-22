@@ -1,9 +1,14 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Мои объявления");
-?><?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Мои объявления");?>
+<?global $arFilter;
+$user = $GLOBALS['USER']->GetID();
+$arFilter = ['CREATED_BY' => $user];
+?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"ads_complex", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -29,8 +34,16 @@ $APPLICATION->SetTitle("Мои объявления");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "BATHROOMS",
+			1 => "FLOORS",
+			2 => "GARAGE",
+			3 => "SQUARE",
+			4 => "PRIORITY",
+			5 => "LINKS",
+			6 => "PRICE",
+			7 => "GALLERY",
+			8 => "ADDITIONS",
+			9 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -46,8 +59,14 @@ $APPLICATION->SetTitle("Мои объявления");
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "BATHROOMS",
+			1 => "FLOORS",
+			2 => "GARAGE",
+			3 => "SQUARE",
+			4 => "PRIORITY",
+			5 => "LINKS",
+			6 => "PRICE",
+			7 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -79,11 +98,22 @@ $APPLICATION->SetTitle("Мои объявления");
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "ads_complex",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"USE_SHARE" => "N",
+		"DISPLAY_SECTION_NAME" => "Мои объявления",
+		"FILTER_NAME" => "id_user",
+		"FILTER_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"DISPLAY_FILTER_ID" => "Пользователь",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

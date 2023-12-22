@@ -28,6 +28,11 @@ $arTemplateParameters = array(
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
 	),
+    "DISPLAY_SECTION_NAME" => Array(
+        "NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SECTION_NAME"),
+        "TYPE" => "STRING",
+        "DEFAULT" => "",
+    )
 );
 
 if (($arCurrentValues['USE_SHARE'] ?? 'N') === 'Y')
