@@ -86,6 +86,7 @@ use Bitrix\Main\Page\Asset;
                                     )
                                 );?>
                     </p>
+                    <a href="/polzovatel/auth.php"><?=GetMessage("AUTH")?></a>
                 </div>
                 <div class="col-6 col-md-6 text-right">
                 <?$APPLICATION->IncludeComponent(
