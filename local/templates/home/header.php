@@ -25,9 +25,8 @@ use Bitrix\Main\Page\Asset;
         <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");?>
        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/aos.css");?>
        <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");?>
-
-
-       <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");?><?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");?>
+       <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");?>
+		<?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");?>
        <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");?>
        <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");?>
        <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");?>
