@@ -1,4 +1,6 @@
 <?
+$PERM["bitrix"]["8"]="D";
+$PERM["bitrix"]["9"]="D";
 $PERM["/"]["*"]="R";
 $PERM["/"]["G8"]="W";
 $PERM["lichnyy-kabinet-prodavtsa"]["8"]="R";
@@ -7,7 +9,6 @@ $PERM["lichnyy-kabinet-prodavtsa"]["*"]="D";
 $PERM["lichnyy-kabinet-pokupatelya"]["8"]="R";
 $PERM["lichnyy-kabinet-pokupatelya"]["6"]="R";
 $PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
-$PERM["bitrix"]["8"]="D";
 $PERM["obyavleniya"]["8"]="W";
 $PERM["search"]["5"]="W";
 $PERM["products"]["5"]="W";

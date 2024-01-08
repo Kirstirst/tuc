@@ -82,13 +82,15 @@ $sCurrentH = date("H", time());
         </div>
     </nav>
     <?php if($APPLICATION->GetCurDir() != "/s2/"): ?>
-    <div class="breadcrumbs-box">
-            <div class="inner-wrap">
-                <a href="">Главная</a>
-                <a href="">Мебель</a>
-                <span>Выставки и события</span>
-            </div>
-    </div>
+    <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"nav_bread_crumb",
+	Array(
+		"PATH" => "",
+		"SITE_ID" => "s2",
+		"START_FROM" => "0"
+	)
+);?><br>
     <?php endif; ?>
     <!-- /nav -->
     <!-- page -->

@@ -11,7 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-echo '<pre>'; print_r($arResult); '</pre>';
+//echo '<pre>'; print_r($arResult); '</pre>';
 ?>
 <div class="review-block">
 	<div class="review-text">
