@@ -52,8 +52,8 @@ IncludeTemplateLangFile(__FILE__);
 
         <!-- footer rew slider box -->
         <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"list_rew", 
+	"bitrix:news.list",
+	"list_rew",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -96,7 +96,7 @@ IncludeTemplateLangFile(__FILE__);
 		"PAGER_TITLE" => "Новости",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
+		"PREVIEW_TRUNCATE_LEN" => "150",
 		"PROPERTY_CODE" => array(
 			0 => "POSITION",
 			1 => "COMPANY",
