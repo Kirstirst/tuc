@@ -9,28 +9,28 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Руководство", 
-		SITE_DIR."management.php", 
+		SITE_DIR."/company/management.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Миссия и стратегия", 
-		SITE_DIR."mission.php", 
+		SITE_DIR."/company/mission.php", 
 		Array(), 
 		Array(), 
 		"\$USER->IsAuthorized()" 
 	),
 	Array(
 		"История", 
-		SITE_DIR."history.php", 
+		SITE_DIR."/company/history.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Вакансии", 
-		SITE_DIR."vacancies.php", 
+		SITE_DIR."/company/vacancies.php", 
 		Array(), 
 		Array(), 
 		"" 
