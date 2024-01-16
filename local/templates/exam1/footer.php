@@ -24,12 +24,16 @@ IncludeTemplateLangFile(__FILE__);
         )
     );?>
     <!-- side anonse -->
-    <div class="side-block side-anonse">
-        <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
-        <div class="item">
-            <p>Клиенты предпочитают все больше эко-материалов.</p>
-        </div>
-    </div>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:main.include",
+        "include",
+        Array(
+            "AREA_FILE_RECURSIVE" => "Y",
+            "AREA_FILE_SHOW" => "sect",
+            "AREA_FILE_SUFFIX" => "inc",
+            "EDIT_TEMPLATE" => ""
+        )
+    );?>
     <!-- /side anonse -->
     <!-- side wrap -->
     <div class="side-wrap">
@@ -138,15 +142,24 @@ IncludeTemplateLangFile(__FILE__);
         <nav class="main-menu">
             <div class="item">
                 <div class="title-block">О магазине</div>
-                <ul>
-                    <li><a href="">Отзывы</a>
-                    </li>
-                    <li><a href="">Руководство </a>
-                    </li>
-                    <li><a href="">История</a>
-                    </li>
-                </ul>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "bottom_exam1",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "1",
+                        "MENU_CACHE_GET_VARS" => array(""),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "N",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "bottom_exam1",
+                        "USE_EXT" => "N"
+                    )
+                );?>
             </div>
+
             <div class="item">
                 <div class="title-block">Каталог товаров</div>
                 <ul>
@@ -177,8 +190,16 @@ IncludeTemplateLangFile(__FILE__);
             <div class="title-block"><?echo GetMessage("CONTACT_INFO")?></div>
             <div class="loc-block">
                 <div class="address">ул. Летняя, стр.12, офис 512</div>
-                <div class="phone"><a href="tel:84952128506">8 (495) 212-85-06</a>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/include/phone_s2.php"
+                    )
+                );?>
             </div>
             <div class="main-soc-block">
                 <a href="" class="soc-item">

@@ -34,8 +34,10 @@ $this->setFrameMode(true);
 		</div>
 		<div class="review-img-wrap">
 			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-				<?php if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
-				    <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
+				<?php if($arItem["DETAIL_PICTURE"]["SRC"]):
+                    $renderImage = CFile::ResizeImageGet($arItem["DETAIL_PICTURE"], Array("width" => 68, "height" => 50), BX_RESIZE_IMAGE_EXACT, true);
+                    ?>
+				    <img src="<?=$renderImage['src']?>" alt="<?=$arItem["DETAIL_PICTURE"]["ALT"]?>">
                 <?php else:?>
 					<img src="<?=SITE_TEMPLATE_PATH . "/img/rew/no_photo.jpg"?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
                 <?php endif;?>

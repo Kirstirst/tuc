@@ -34,6 +34,20 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Раздел для проверки шаблона", 
+		SITE_DIR."/company/razdel-dlya-proverki-shablona/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Обратная связь", 
+		SITE_DIR."/company/obratnaya-svyaz.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

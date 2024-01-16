@@ -38,7 +38,7 @@ $this->setFrameMode(true);
                     <div class="name-block"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></div>
                     <div class="pos-block"><?=$arItem["DISPLAY_PROPERTIES"]["POSITION"]["DISPLAY_VALUE"]?> , <?=$arItem["DISPLAY_PROPERTIES"]["COMPANY"]["DISPLAY_VALUE"]?></div>
                 </div>
-                <div class="text-block"><?=TruncateText($arItem["PREVIEW_TEXT"], 150);?></div>
+                <div class="text-block"><?=$arItem["PREVIEW_TEXT"]?></div>
             </div>
         </div>
     </div>
