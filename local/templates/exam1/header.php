@@ -81,7 +81,7 @@ $sCurrentH = date("H", time());
 );?>
         </div>
     </nav>
-    <?php if($APPLICATION->GetCurDir() != "/s2/"): ?>
+	<?php if($APPLICATION->GetCurPage(false) !== '/s2/'): ?>
     <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",
 	"nav_bread_crumb",
@@ -100,12 +100,12 @@ $sCurrentH = date("H", time());
             <!-- content -->
             <div class="content">
                 <div class="cnt">
-                    <?php if ($APPLICATION->GetCurDir() != "/s2/"):?>
+                    <?php if ($APPLICATION->GetCurPage(false) !== '/s2/'):?>
 						<header>
 							<h1><?php $APPLICATION->ShowTitle(true); ?></h1>
 						</header>
 					<?php endif;?>
-					<?php if ($APPLICATION->GetCurDir() == "/s2/"):?>
+					<?php if ($APPLICATION->GetCurPage(false) === '/s2/'):?>
 					<p>«Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
 					</p>
 					<!-- index column -->
